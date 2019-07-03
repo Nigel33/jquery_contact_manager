@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font: 18px arial, helvetica;
+}
+
+.new {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.contacts {
+	margin: 20px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contact {
+	padding: 0 10px;
+	width: 30%;
+}
+
+.contact h3 {
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.contact dt, .contact dd {
+	display: block;
+	padding: 0 0 5px 0;
+}
+
+.contact dt {
+	font-weight: bold;
+}
+
+dl.tags {
+	flex-wrap: wrap;
+}
+
+.tags dd :hover {
+	color: green;
+	cursor: pointer;
+}
+
+.contact .tags dt, .contact .tags dd  {
+	display: inline-block;
+}
+
+header {
+	height: 120px;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+h1 {
+	padding-top: 15px;
+}
+
+h2 {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.new dl {
+	margin: 10px 0;
+	display: flex;
+	position: relative;
+}
+
+dl.action {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.new dt {
+	font-size: 22px;
+	width: 20%;
+	text-align: right;
+	margin-right: 10px;
+	position: relative;
+	top: 18px;
+	font-weight: bold;
+}
+
+.new dd {
+	width: 70%;
+}
+
+input[type="text"] {
+	font-size: 22px;
+	height: 60px;
+	padding: 5px;
+	width: 100%;
+	border-color: green;
+}
+
+input[type="button"]:hover {
+	cursor: pointer;
+	background-color: green;
+	color: white;
+}
+
+.invalid_field {
+	border: 3px solid red;
+}
+
+.form_errors {
+	color: red;
+}
+
+input[type="submit"], input[type="button"] {
+	width: 120px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+fieldset {
+	border-style: none;
+}
+
+span {
+	color: red;
+	display: block;
+	margin: 5px 0;
+}
+
+.menu {
+	display: flex;
+	position: relative;
+}
+
+.menu input[type="button"] {
+	font-size: 30px;
+	width: 250px;
+	height: 80px;
+	position: relative;
+	left: 300px;
+}
+
+.menu input[type="text"] {
+	width: 25%;
+	height: 50px;
+	font-size: 25px;
+	position: relative;
+	left: 500px;
+	top: 45px;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	background-color: green;
+	color: white;
+}
+
+
+
+
+

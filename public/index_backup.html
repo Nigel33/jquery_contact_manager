@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/handlebars.js"></script>
+    <script src="javascripts/app.js"></script>
+
+    <title>Contact Manager</title>
+
+  </head>
+  <body>
+    <header>
+      <h1>Contact Manager</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script id="contacts" type="text/x-handlebars">
+      <div class="all_contacts">
+        <div class="menu">
+          <input type="button" id="add_contact" name="Add Contact" value="Add Contact">
+          <input type="text" name="search" placeholder="Search">
+        </div>
+        <div class="contacts">
+          {{#each contacts}}
+          <div class="contact" data-id={{id}}>
+            <h3>{{full_name}}</h3>
+            <dl>
+              <dt>Phone Number:</dt>
+              <dd>{{phone_number}}</dd>
+              <dt>Email:</dt>
+              <dd>{{email}}</dd>
+            </dl>
+            <div class="action" data-id={{id}}>
+              <input type="button" name="edit" value="Edit" />
+              <input type="button" name="delete" value="Delete">
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+
+    <script id="new_contact" type="text/x-handlebars">
+      <div class="new">
+        <h2>Create Contact</h2>
+        <form class="newContact" action="api/contacts" method="post" novalidate>
+          <p class="form_errors"></p>
+          <fieldset>
+            <dl>
+              <dt>
+                <label for="full_name">Full Name</label>
+              </dt>
+              <dd>
+                <input type="text" id="full_name" name="full_name" value='{{full_name}}' required>
+                <span class="error_message"></span>
+              </dd>
+            </dl>
+
+            <dl>
+              <dt>
+                <label for="email">Email address</label>
+              </dt>
+              <dd>
+                <input type="text" required name="email" id="email" value="{{email}}"
+                placeholder="someone@example.com" pattern=".+@.+">
+                <span class="error_message"></span>
+              </dd>
+            </dl>
+
+            <dl>
+              <dt>
+                <label for="phone_number">Phone number</label>
+              </dt>
+              <dd>
+                <input type="text" name="phone_number" id="phone_number" value="{{phone_number}}" pattern="\d{3}-\d{3}-\d{4}" placeholder="111-222-3333" required>
+                <span class="error_message"></span>
+              </dd>
+            </dl>
+
+            <dl class="action">
+              <input type="submit" />
+              <input type="button" value="Cancel" />
+            </dl>
+
+          </fieldset>
+        </form>
+      </div>
+    </script>
+  </body>
+</html>
